@@ -1,0 +1,81 @@
+﻿@using MyEvernote.WebApp
+@model IEnumerable<MyEvernote.Entities.Category>
+
+@{
+    ViewBag.Title = "Kategoriler";
+}
+
+<div class="row">
+    <div class="col-md-10 col-md-offset-1">
+        <h2>Kategoriler</h2>
+        <hr />
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-10 col-md-offset-1">
+        <p>
+            <a href="/Category/Create" class="btn btn-primary">
+                <span class="glyphicon glyphicon-plus"></span>Yeni Kategori Ekle
+            </a>
+        </p>
+        <table class="table">
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Title)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Description)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.CreatedOn)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ModifiedOn)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ModifiedUsername)
+                </th>
+                <th></th>
+            </tr>
+
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Title)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Description)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.CreatedOn)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ModifiedOn)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ModifiedUsername)
+                    </td>
+                    <td>
+                        @Bootstrap.LinkButton("/Category/Edit/" + item.Id , "warning", "btn-xs", "Edit", "pencil", " Düzenle")
+                        @Bootstrap.LinkButton("/Category/Details/" + item.Id, "primary", "btn-xs", "Detay", "align-justify", " Detay")
+                        @Bootstrap.LinkButton("/Category/Delete/" + item.Id, "danger", "btn-xs", "Sil", "trash", " Sil")
+                        @*<a href="/Category/Edit/@item.Id" class="btn btn-warning btn-xs" title="Edit">
+                            <span style="margin-right: 5px" class="glyphicon glyphicon-pencil"></span>Düzenle
+                        </a>
+                        <a href="/Category/Details/@item.Id" class="btn btn-primary btn-xs" title="Detay">
+                            <span style="margin-right: 5px" class="glyphicon glyphicon-align-justify"></span>Detay
+                        </a>
+                        <a href="/Category/Delete/@item.Id" class="btn btn-danger btn-xs">
+                            <span style="margin-right: 5px" class="glyphicon glyphicon-trash" title="Sil"></span>Sil
+                        </a>*@
+
+                    </td>
+                </tr>
+            }
+
+        </table>
+    </div>
+</div>
+
+

@@ -1,0 +1,4 @@
+C:\Users\Levent\documents\visual studio 2015\Projects\MyEvernoteSolution\MyEvernote.Entities\bin\Debug\MyEvernote.Entities.dll
+C:\Users\Levent\documents\visual studio 2015\Projects\MyEvernoteSolution\MyEvernote.Entities\bin\Debug\MyEvernote.Entities.pdb
+C:\Users\Levent\documents\visual studio 2015\Projects\MyEvernoteSolution\MyEvernote.Entities\obj\Debug\MyEvernote.Entities.dll
+C:\Users\Levent\documents\visual studio 2015\Projects\MyEvernoteSolution\MyEvernote.Entities\obj\Debug\MyEvernote.Entities.pdb
